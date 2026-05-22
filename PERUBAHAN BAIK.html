@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aksi Hijau - Crowdfunding Mangrove & Edukasi Sampah Tangsel</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            dark: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #15803d 0%, #0369a1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-pattern {
+            background-color: #f0fdf4;
+            background-image: radial-gradient(#15803d 0.5px, transparent 0.5px), radial-gradient(#15803d 0.5px, #f0fdf4 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.15;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #15803d;
+            border-radius: 99px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 flex flex-col min-h-screen">
+
+    <header class="sticky top-0 z-40 w-full glass-card border-b border-emerald-100/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between py-4">
+            <a href="#" class="flex items-center space-x-2">
+                <span class="p-2.5 bg-brand-600 rounded-xl text-white shadow-lg shadow-brand-600/30">
+                    <i class="fa-solid fa-seedling text-lg"></i>
+                </span>
+                <div>
+                    <span class="font-extrabold text-xl text-brand-900 tracking-tight block">Aksi Hijau</span>
+                    <span class="text-[10px] text-brand-700 tracking-widest uppercase font-bold block">Tangerang Selatan</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
+                <a href="#proyek" class="hover:text-brand-700 transition">Donasi Proyek</a>
+                <a href="#kalkulator" class="hover:text-brand-700 transition">Kalkulator Eco</a>
+                <a href="#peta" class="hover:text-brand-700 transition">Peta Dampak</a>
+                <a href="#ai-advisor" class="hover:text-brand-700 transition flex items-center gap-1.5 bg-emerald-50 text-brand-800 px-3 py-1.5 rounded-full border border-emerald-200">
+                    <i class="fa-solid fa-robot text-brand-600 animate-pulse"></i> Eco-AI Assistant
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <a href="#komitmen" class="hidden sm:inline-flex text-xs bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-4 rounded-xl transition">
+                    Lihat Pledges
+                </a>
+                <a href="#proyek" class="bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs py-2.5 px-5 rounded-xl shadow-md shadow-brand-600/20 transition flex items-center gap-2">
+                    <i class="fa-solid fa-heart-pulse"></i> Donasi Sekarang
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative bg-gradient-to-b from-brand-50 to-slate-50 py-16 md:py-24 overflow-hidden">
+        <div class="absolute inset-0 hero-pattern"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Left: Pitch & Impact -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-brand-100 text-brand-800 text-xs font-extrabold uppercase rounded-full border border-brand-200 shadow-sm">
+                    <i class="fa-solid fa-globe"></i> Inisiatif Pemuda Tangerang Selatan
+                </span>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 font-serif leading-tight">
+                    Satu Langkah Kecil untuk <span class="text-gradient">Bumi yang Lebih Lestari</span>
+                </h1>
+                <p class="text-slate-600 text-base sm:text-lg max-w-2xl leading-relaxed">
+                    Kami mengundang Anda beraksi nyata. Dukung proyek restorasi ekosistem mangrove pesisir utara Banten serta program edukasi & fasilitas bank sampah mandiri untuk warga Tangerang Selatan.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                    <a href="#proyek" class="bg-brand-600 hover:bg-brand-700 text-white text-base font-bold py-3.5 px-8 rounded-2xl shadow-xl shadow-brand-600/20 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-leaf"></i> Sponsori Bibit Mangrove
+                    </a>
+                    <a href="#ai-advisor" class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 text-base font-bold py-3.5 px-8 rounded-2xl shadow-sm transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-comment-dots text-emerald-600"></i> Tanya Tanya Edukasi AI
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Right: Dynamic Stats Widget Box -->
+            <div class="lg:col-span-5">
+                <div class="glass-card border border-white rounded-3xl shadow-xl p-6 md:p-8 space-y-6 relative">
+                    <div class="absolute top-4 right-4 bg-brand-500 text-white font-bold text-[10px] uppercase px-2.5 py-1 rounded-md tracking-wider">
+                        Live Data
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm tracking-wide uppercase border-b border-slate-100 pb-3">
+                        <i class="fa-solid fa-chart-simple text-brand-600 mr-1.5"></i> Ringkasan Dampak Kumulatif
+                    </h3>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-brand-50/50 rounded-2xl border border-brand-100 flex flex-col justify-between">
+                            <span class="text-xs text-slate-500 font-medium">Dana Terkumpul</span>
+                            <span id="stat-total-funds" class="font-mono font-bold text-lg sm:text-xl text-brand-900 mt-2 block">Rp 56.400.000</span>
+                        </div>
+                        <div class="p-4 bg-blue-50/50 rounded-2xl border border-blue-100 flex flex-col justify-between">
+                            <span class="text-xs text-slate-500 font-medium">Bibit Mangrove</span>
+                            <span id="stat-total-trees" class="font-mono font-bold text-lg sm:text-xl text-blue-900 mt-2 block">2.820 Pohon</span>
+                        </div>
+                        <div class="p-4 bg-emerald-50/50 rounded-2xl border border-emerald-100 flex flex-col justify-between">
+                            <span class="text-xs text-slate-500 font-medium">Donatur Terlibat</span>
+                            <span id="stat-total-donors" class="font-mono font-bold text-lg sm:text-xl text-emerald-900 mt-2 block">342 Orang</span>
+                        </div>
+                        <div class="p-4 bg-purple-50/50 rounded-2xl border border-purple-100 flex flex-col justify-between">
+                            <span class="text-xs text-slate-500 font-medium">Sampah Teredukasi</span>
+                            <span id="stat-total-waste" class="font-mono font-bold text-lg sm:text-xl text-purple-900 mt-2 block">12.4 Ton</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-900 text-emerald-100 p-4 rounded-2xl text-xs flex items-center space-x-3 leading-relaxed">
+                        <div class="text-xl text-brand-400"><i class="fa-solid fa-hand-holding-heart animate-bounce"></i></div>
+                        <p>Setiap donasi Rp 20.000 mensponsori penanaman 1 bibit mangrove bersertifikat di pesisir Banten utara.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyek" class="py-16 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="text-brand-600 text-xs font-bold uppercase tracking-wider block">PROYEK AKTIF KAMI</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-serif">Pilih Proyek Kampanye Lingkunganmu</h2>
+                <p class="text-slate-500 text-sm sm:text-base">
+                    Salurkan dukungan finansial Anda secara langsung ke pos kampanye yang paling menginspirasi Anda. Seluruh progres keuangan dipantau transparan.
+                </p>
+            </div>
+
+            <!-- Campaigns Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                
+                <!-- Campaign 1: Mangrove Restoration -->
+                <div class="bg-slate-50 rounded-3xl border border-slate-200 overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300">
+                    <div class="relative h-60 bg-gradient-to-br from-teal-800 to-emerald-900 text-white flex flex-col justify-end p-6">
+                        <div class="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-40" style="background-image: url('https://placehold.co/600x400/064e3b/ffffff?text=Penanaman+Mangrove+Banten');"></div>
+                        <span class="absolute top-4 left-4 bg-brand-600 text-white font-extrabold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">Restorasi Pesisir</span>
+                        <h3 class="font-serif font-bold text-2xl text-white relative z-10 leading-tight">Restorasi Sabuk Hijau Mangrove Pesisir Banten</h3>
+                        <p class="text-emerald-100 text-xs mt-2 relative z-10"><i class="fa-solid fa-map-location-dot mr-1"></i> Tanjung Pasir & Teluk Banten, Banten Utara</p>
+                    </div>
+                    
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-6">
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Mencegah abrasi ekstrem dan menciptakan habitat laut baru di pesisir utara dengan penanaman 2.500 bibit mangrove jenis Rhizophora Mucronata terkelola berkelanjutan.
+                        </p>
+
+                        <!-- Progress Bar & Target -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-end text-xs font-semibold text-slate-600">
+                                <span>Dana Terkumpul</span>
+                                <span class="font-mono text-brand-700 font-bold" id="proj-1-percent">64%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
+                                <div id="proj-1-bar" class="bg-gradient-to-r from-emerald-500 to-teal-600 h-full transition-all duration-500" style="width: 64%"></div>
+                            </div>
+                            <div class="flex justify-between text-[11px] font-bold font-mono text-slate-500">
+                                <span>Rp <span id="proj-1-raised">32.200.000</span></span>
+                                <span>Target: Rp 50.000.000</span>
+                            </div>
+                        </div>
+
+                        <!-- Impact Estimator for this specific project -->
+                        <div class="p-4 bg-emerald-50/50 rounded-2xl border border-emerald-100/50 flex items-center justify-between text-xs">
+                            <span class="text-slate-600 font-medium">Estimasi Dampak Proyek:</span>
+                            <span class="font-bold text-brand-800"><i class="fa-solid fa-wind mr-1"></i> 1.610 kg CO₂ Serapan / Thn</span>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <button type="button" onclick="openDonationModal(1)"
+                            class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 rounded-xl shadow-md shadow-brand-600/10 hover:shadow-brand-600/20 transition flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-heart"></i> Sponsori Proyek Ini
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Campaign 2: Waste Bank & Education -->
+                <div class="bg-slate-50 rounded-3xl border border-slate-200 overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300">
+                    <div class="relative h-60 bg-gradient-to-br from-indigo-900 to-slate-900 text-white flex flex-col justify-end p-6">
+                        <div class="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-40" style="background-image: url('https://placehold.co/600x400/1e1b4b/ffffff?text=Bank+Sampah+Masyarakat');"></div>
+                        <span class="absolute top-4 left-4 bg-blue-600 text-white font-extrabold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">Edukasi Warga</span>
+                        <h3 class="font-serif font-bold text-2xl text-white relative z-10 leading-tight">Edukasi & Pembentukan Bank Sampah Warga Tangsel</h3>
+                        <p class="text-indigo-200 text-xs mt-2 relative z-10"><i class="fa-solid fa-map-location-dot mr-1"></i> Pamulang, Serpong, & Ciputat, Tangerang Selatan</p>
+                    </div>
+                    
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-6">
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Membangun sistem pemilahan sampah hulu di 3 kluster RW percontohan di Tangsel melalui pengadaan tong komposter komunal, literasi digital, dan sistem tabungan daur ulang.
+                        </p>
+
+                        <!-- Progress Bar & Target -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-end text-xs font-semibold text-slate-600">
+                                <span>Dana Terkumpul</span>
+                                <span class="font-mono text-brand-700 font-bold" id="proj-2-percent">40%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
+                                <div id="proj-2-bar" class="bg-gradient-to-r from-blue-500 to-indigo-600 h-full transition-all duration-500" style="width: 40%"></div>
+                            </div>
+                            <div class="flex justify-between text-[11px] font-bold font-mono text-slate-500">
+                                <span>Rp <span id="proj-2-raised">10.000.000</span></span>
+                                <span>Target: Rp 25.000.000</span>
+                            </div>
+                        </div>
+
+                        <!-- Impact Estimator for this specific project -->
+                        <div class="p-4 bg-indigo-50/50 rounded-2xl border border-indigo-100/50 flex items-center justify-between text-xs">
+                            <span class="text-slate-600 font-medium">Estimasi Dampak Proyek:</span>
+                            <span class="font-bold text-indigo-800"><i class="fa-solid fa-trash-arrow-up mr-1"></i> 500+ KK Terlayani / Bulan</span>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <button type="button" onclick="openDonationModal(2)"
+                            class="w-full bg-brand-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl shadow-md shadow-brand-900/10 hover:shadow-brand-900/20 transition flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-heart"></i> Sponsori Proyek Ini
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="kalkulator" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Calculator Mechanics -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brand-600 text-xs font-bold uppercase tracking-wider block">WIDGET INTERAKTIF</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-serif">Kalkulator Jejak Karbon & Konvensi Bibit</h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Coba estimasikan aktivitas harianmu untuk memperkirakan beban emisi karbon pribadimu, kemudian temukan berapa banyak pohon mangrove yang harus ditanam untuk menyerap emisi tersebut!
+                    </p>
+
+                    <!-- Calculator Card -->
+                    <div class="bg-white rounded-3xl border border-slate-200 p-6 space-y-5 shadow-sm">
+                        
+                        <!-- Input 1: Jarak Kendaraan Bermotor -->
+                        <div class="space-y-2">
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider">Jarak Tempuh Berkendara (KM / Hari)</label>
+                            <div class="flex items-center space-x-4">
+                                <input type="range" id="input-range-km" min="0" max="100" value="20" oninput="calculateEcoImpact()" class="w-full accent-brand-600 h-2 bg-slate-100 rounded-lg cursor-pointer">
+                                <span class="font-mono font-bold text-slate-800 bg-slate-100 px-3 py-1.5 rounded-lg text-sm w-20 text-center"><span id="val-range-km">20</span> km</span>
+                            </div>
+                        </div>
+
+                        <!-- Input 2: Jenis Kendaraan -->
+                        <div class="space-y-2">
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider">Jenis Kendaraan Pribadi</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <label class="border-2 border-slate-200 hover:border-brand-500 rounded-xl p-3 text-center cursor-pointer transition flex flex-col items-center justify-center space-y-2">
+                                    <input type="radio" name="vehicle-type" value="motor" checked onchange="calculateEcoImpact()" class="hidden">
+                                    <i class="fa-solid fa-motorcycle text-xl text-slate-400" id="icon-v-motor"></i>
+                                    <span class="text-[10px] font-bold uppercase block text-slate-600">Sepeda Motor</span>
+                                </label>
+                                <label class="border-2 border-slate-200 hover:border-brand-500 rounded-xl p-3 text-center cursor-pointer transition flex flex-col items-center justify-center space-y-2">
+                                    <input type="radio" name="vehicle-type" value="car" onchange="calculateEcoImpact()" class="hidden">
+                                    <i class="fa-solid fa-car text-xl text-slate-400" id="icon-v-car"></i>
+                                    <span class="text-[10px] font-bold uppercase block text-slate-600">Mobil Bensin</span>
+                                </label>
+                                <label class="border-2 border-slate-200 hover:border-brand-500 rounded-xl p-3 text-center cursor-pointer transition flex flex-col items-center justify-center space-y-2">
+                                    <input type="radio" name="vehicle-type" value="electric" onchange="calculateEcoImpact()" class="hidden">
+                                    <i class="fa-solid fa-charging-station text-xl text-slate-400" id="icon-v-electric"></i>
+                                    <span class="text-[10px] font-bold uppercase block text-slate-600">Kendaraan Listrik</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Input 3: Konsumsi Listrik Bulanan -->
+                        <div class="space-y-2">
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider">Penggunaan Listrik Rumah Tangga (kWh / Bulan)</label>
+                            <div class="flex items-center space-x-4">
+                                <input type="range" id="input-range-kwh" min="50" max="1000" step="50" value="200" oninput="calculateEcoImpact()" class="w-full accent-brand-600 h-2 bg-slate-100 rounded-lg cursor-pointer">
+                                <span class="font-mono font-bold text-slate-800 bg-slate-100 px-3 py-1.5 rounded-lg text-sm w-24 text-center"><span id="val-range-kwh">200</span> kWh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Calculator Output Summary Dashboard -->
+                <div class="lg:col-span-6 bg-brand-900 rounded-3xl p-8 text-white space-y-6 shadow-xl relative overflow-hidden">
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
+                    
+                    <h3 class="font-serif font-bold text-2xl text-emerald-100">Estimasi Jejak Karbon & Rekomendasi</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b border-emerald-800/60 pb-3.5">
+                            <span class="text-emerald-200 text-xs uppercase tracking-wider font-semibold">Taksiran Emisi Tahunan Anda</span>
+                            <span class="font-mono font-black text-2xl text-white"><span id="calc-co2-total">1.240</span> kg CO₂</span>
+                        </div>
+                        
+                        <div class="flex justify-between items-center border-b border-emerald-800/60 pb-3.5">
+                            <span class="text-emerald-200 text-xs uppercase tracking-wider font-semibold">Daya Serap Alami 1 Mangrove</span>
+                            <span class="font-semibold text-sm text-emerald-300">~ 20 kg CO₂ / Tahun</span>
+                        </div>
+
+                        <div class="p-4 bg-white/10 rounded-2xl border border-white/10 space-y-2">
+                            <span class="text-emerald-300 text-[10px] font-bold uppercase tracking-wider block">Kebutuhan Penyeimbang (Offset)</span>
+                            <div class="flex justify-between items-center">
+                                <span class="text-base sm:text-lg font-bold">Bibit Mangrove yang Harus Anda Tanam</span>
+                                <span class="font-mono font-black text-3xl text-brand-300 bg-white/10 px-4 py-1.5 rounded-xl border border-white/20"><span id="calc-mangrove-rec">62</span> Bibit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                        <button type="button" onclick="presetDonationFromCalc()" class="flex-1 bg-brand-500 hover:bg-brand-600 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-tree"></i> Sponsori Sekarang
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="peta" class="py-16 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+                <span class="text-brand-600 text-xs font-bold uppercase tracking-wider block">PETA AKSI LAPANGAN</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 font-serif">Wilayah Dampak Aksi Hijau</h2>
+                <p class="text-slate-500 text-sm">
+                    Klik wilayah penanda berikut pada peta untuk melihat fokus aktivitas yang sedang kami laksanakan.
+                </p>
+            </div>
+
+            <!-- Interaktif SVG / Mockup Map Box -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 bg-slate-50 rounded-3xl p-6 border border-slate-200 flex justify-center items-center h-[350px] relative overflow-hidden">
+                    <!-- Dynamic Interactive SVG Map Representation of Tangsel & Coastal Banten -->
+                    <svg viewBox="0 0 500 300" class="w-full h-full max-w-[450px]">
+                        <!-- Land Mockup -->
+                        <path d="M 50 150 C 100 130, 200 140, 250 120 C 300 100, 350 80, 450 60 L 450 250 L 50 250 Z" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2" />
+                        <!-- Sea Mockup -->
+                        <path d="M 50 150 C 100 130, 200 140, 250 120 C 300 100, 350 80, 450 60 L 450 50 L 50 50 Z" fill="#bae6fd" stroke="#7dd3fc" stroke-width="2" />
+                        
+                        <!-- Coastline Border -->
+                        <path d="M 50 150 C 100 130, 200 140, 250 120 C 300 100, 350 80, 450 60" fill="none" stroke="#22c55e" stroke-width="3" stroke-dasharray="5 5" />
+
+                        <!-- Hotspot 1: Pesisir Banten (Mangrove) -->
+                        <g class="cursor-pointer" onclick="showMapDetail('mangrove')">
+                            <circle cx="180" cy="120" r="15" fill="#16a34a" opacity="0.3" class="animate-ping" />
+                            <circle cx="180" cy="120" r="8" fill="#16a34a" stroke="#fff" stroke-width="2" />
+                            <text x="180" y="105" text-anchor="middle" font-size="10" font-weight="bold" fill="#14532d" class="font-sans">Teluk Banten (Pohon)</text>
+                        </g>
+
+                        <!-- Hotspot 2: Tangerang Selatan (Waste Management) -->
+                        <g class="cursor-pointer" onclick="showMapDetail('waste')">
+                            <circle cx="320" cy="200" r="15" fill="#4f46e5" opacity="0.3" class="animate-ping" />
+                            <circle cx="320" cy="200" r="8" fill="#4f46e5" stroke="#fff" stroke-width="2" />
+                            <text x="320" y="185" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e1b4b" class="font-sans">TangSel (Edukasi Sampah)</text>
+                        </g>
+                    </svg>
+                    <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-200 text-[10px] font-bold text-slate-500">
+                        * Klik penanda hijau/biru untuk detail
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 bg-slate-50 p-6 rounded-3xl border border-slate-200 h-[350px] flex flex-col justify-between">
+                    <div class="space-y-4" id="map-detail-box">
+                        <div class="flex items-center space-x-3">
+                            <span class="p-2.5 bg-emerald-100 text-brand-800 rounded-xl"><i class="fa-solid fa-tree"></i></span>
+                            <h3 class="font-bold text-slate-800 text-lg" id="map-detail-title">Restorasi Mangrove Banten</h3>
+                        </div>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed" id="map-detail-desc">
+                            Berlokasi di Tanjung Pasir dan Teluk Banten, kami berkolaborasi dengan kelompok tani nelayan setempat untuk memelihara bibit mangrove usia awal 1-3 tahun guna menahan risiko kenaikan air laut.
+                        </p>
+                        <div class="bg-white p-3 rounded-2xl border border-slate-200/80 text-xs space-y-1.5 font-semibold text-slate-500">
+                            <div><i class="fa-solid fa-check text-brand-600 mr-2"></i>Status: <span class="text-brand-800 font-bold" id="map-detail-status">Sangat Aktif</span></div>
+                            <div><i class="fa-solid fa-check text-brand-600 mr-2"></i>Total Tertanam: <span class="text-brand-800 font-bold" id="map-detail-total">2.820 Batang</span></div>
+                        </div>
+                    </div>
+
+                    <a href="#proyek" class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-4 rounded-xl text-xs text-center transition">
+                        Dukung Proyek Daerah Ini
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-advisor" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+                
+                <!-- Chatbot Context -->
+                <div class="lg:col-span-5 space-y-6 flex flex-col justify-center">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-100 text-brand-800 text-xs font-bold uppercase rounded-full">
+                        <i class="fa-solid fa-brain animate-bounce"></i> Eco-AI Assistant Terintegrasi
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-serif">Konsultasi Pilah Sampah & Mangrove Instan</h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Punya pertanyaan seputar pemilahan sampah organik, lokasi bank sampah di Tangerang Selatan, komposting mandiri, atau cara kerja mangrove menahan abrasi?
+                    </p>
+                    <p class="text-slate-500 text-xs">
+                        * Chatbot kami menggunakan AI model Gemini untuk memberikan arahan praktis dan ramah lingkungan seketika.
+                    </p>
+                </div>
+
+                <!-- Live Chatbox Layout -->
+                <div class="lg:col-span-7 bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden flex flex-col h-[450px]">
+                    <!-- Chat Header -->
+                    <div class="bg-gradient-to-r from-brand-700 to-slate-900 text-white px-5 py-4 flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center border border-emerald-400">
+                                <i class="fa-solid fa-robot text-lg text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm">Mas Eco-Bot</h4>
+                                <p class="text-[10px] text-emerald-200">Spesialis Edukasi Lingkungan Aksi Hijau</p>
+                            </div>
+                        </div>
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                    </div>
+
+                    <!-- Chat Message Area -->
+                    <div id="chat-messages-container" class="flex-grow p-4 overflow-y-auto space-y-3 text-xs sm:text-sm bg-slate-50">
+                        <!-- Initial Message -->
+                        <div class="flex items-start space-x-2.5 max-w-[85%]">
+                            <div class="w-7 h-7 rounded-lg bg-emerald-100 text-brand-800 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-2xl border border-slate-200 text-slate-700">
+                                Halo warga Tangerang Selatan dan pejuang bumi! Saya Mas Eco-Bot. Silakan tanyakan apa saja tentang cara memilah sampah dapur, pembuatan kompos, atau tentang ekosistem mangrove di Banten! 😊
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat Loading indicator -->
+                    <div id="chat-loading-spinner" class="hidden px-4 py-2 bg-slate-50 flex items-center space-x-2 text-xs text-slate-500">
+                        <i class="fa-solid fa-circle-notch animate-spin text-brand-600"></i>
+                        <span>Mas Eco-Bot sedang memikirkan solusi ramah lingkungan...</span>
+                    </div>
+
+                    <!-- Chat Input form -->
+                    <form onsubmit="handleSendChatMessage(event)" class="border-t border-slate-200 p-3 bg-white flex items-center gap-2">
+                        <input type="text" id="chat-input-field" required
+                            class="flex-grow px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-xs sm:text-sm"
+                            placeholder="Ketik pertanyaanmu di sini (misal: Tips memilah sampah plastik)...">
+                        <button type="submit" class="bg-brand-600 hover:bg-brand-700 text-white w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center shrink-0 shadow transition">
+                            <i class="fa-solid fa-paper-plane text-sm"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="komitmen" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left: Pledge Form -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-brand-600 text-xs font-bold uppercase tracking-wider block">Eco-Pledge Wall</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 font-serif">Kirim Janji Hijau-Mu</h2>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        Komitmen pelestarian berawal dari janji diri sendiri. Kirimkan pledge atau janji ramah lingkunganmu hari ini (misal: "Saya berjanji membawa kantong belanja kain setiap ke pasar BSD").
+                    </p>
+
+                    <!-- Pledge Form -->
+                    <form onsubmit="handleNewPledge(event)" class="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-4 shadow-sm">
+                        <div class="space-y-1.5">
+                            <label for="pledge-name" class="block text-xs font-bold text-slate-500 uppercase tracking-wider">Nama Anda / Inisial</label>
+                            <input type="text" id="pledge-name" required placeholder="Contoh: Budi di Ciputat" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm font-semibold">
+                        </div>
+                        <div class="space-y-1.5">
+                            <label for="pledge-text" class="block text-xs font-bold text-slate-500 uppercase tracking-wider">Pernyataan Janji Hijau</label>
+                            <textarea id="pledge-text" rows="3" required placeholder="Saya berjanji akan mengurangi penggunaan sedotan plastik sekali pakai mulai hari ini..." class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm leading-relaxed"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition text-xs uppercase tracking-wider">
+                            Kirim ke Dinding Pledges
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right: Active Pledges Wall -->
+                <div class="lg:col-span-7 space-y-4">
+                    <h3 class="font-bold text-slate-800 text-sm tracking-wide uppercase flex items-center justify-between border-b border-slate-100 pb-3">
+                        <span><i class="fa-solid fa-heart-pulse text-rose-500 mr-2"></i> Janji Hijau Warga Tangsel</span>
+                        <span id="pledge-counter" class="text-xs bg-slate-100 px-2 py-1 rounded-md text-slate-500 font-mono">3 Janji</span>
+                    </h3>
+
+                    <div id="pledges-board-container" class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[380px] overflow-y-auto pr-1">
+                        <!-- Dynamic Pledges generate here -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-donation" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden border border-slate-100 transform scale-100 transition duration-150 flex flex-col max-h-[90vh]">
+            
+            <!-- Modal Header -->
+            <div class="bg-gradient-to-r from-brand-700 to-slate-900 text-white px-6 py-5 flex items-center justify-between">
+                <div>
+                    <h3 class="font-serif font-bold text-xl" id="modal-project-title">Sponsori Kampanye</h3>
+                    <p class="text-[10px] text-emerald-200" id="modal-project-category">Kategori Proyek</p>
+                </div>
+                <button onclick="closeDonationModal()" class="text-white hover:text-slate-200 text-xl"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <!-- Modal Body (Scrollable if needed) -->
+            <div class="p-6 overflow-y-auto space-y-4 flex-grow text-xs sm:text-sm">
+                
+                <!-- Donation presets -->
+                <div class="space-y-2">
+                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Pilih Nominal Donasi Anda</label>
+                    <div class="grid grid-cols-4 gap-2">
+                        <button onclick="selectPresetAmount(20000)" class="border-2 border-slate-200 hover:border-brand-500 rounded-xl py-2 px-1 text-center font-mono font-bold hover:bg-brand-50 text-slate-700 transition">20K</button>
+                        <button onclick="selectPresetAmount(50000)" class="border-2 border-slate-200 hover:border-brand-500 rounded-xl py-2 px-1 text-center font-mono font-bold hover:bg-brand-50 text-slate-700 transition">50K</button>
+                        <button onclick="selectPresetAmount(100000)" class="border-2 border-slate-200 hover:border-brand-500 rounded-xl py-2 px-1 text-center font-mono font-bold hover:bg-brand-50 text-slate-700 transition">100K</button>
+                        <button onclick="selectPresetAmount(250000)" class="border-2 border-slate-200 hover:border-brand-500 rounded-xl py-2 px-1 text-center font-mono font-bold hover:bg-brand-50 text-slate-700 transition">250K</button>
+                    </div>
+                </div>
+
+                <!-- Custom Amount Input -->
+                <div class="space-y-1.5">
+                    <label for="input-custom-amount" class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Nominal Kustom (Rupiah)</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 font-bold font-mono">Rp</span>
+                        <input type="number" id="input-custom-amount" step="5000" min="10000" required oninput="calculateMangroveMultiplier()"
+                            class="w-full pl-10 pr-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm font-mono font-bold"
+                            placeholder="Ketik minimal 10000">
+                    </div>
+                    <p class="text-[10px] text-slate-500" id="donation-multiplier-info">Setara dengan sponsori 0 bibit mangrove.</p>
+                </div>
+
+                <!-- Donor Info -->
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="space-y-1.5">
+                        <label for="input-donor-name" class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Nama Lengkap</label>
+                        <input type="text" id="input-donor-name" required placeholder="Inisial atau Nama Asli" class="w-full px-3 py-2 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-500 text-xs">
+                    </div>
+                    <div class="space-y-1.5">
+                        <label for="input-donor-email" class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Alamat Email</label>
+                        <input type="email" id="input-donor-email" required placeholder="nama@email.com" class="w-full px-3 py-2 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-500 text-xs">
+                    </div>
+                </div>
+
+                <!-- Payment Channels selection -->
+                <div class="space-y-2">
+                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Pilih Metode Transaksi</label>
+                    <div class="grid grid-cols-3 gap-2 text-[10px] font-bold text-slate-600">
+                        <label class="border-2 border-brand-500 bg-brand-50/50 rounded-xl p-2.5 text-center cursor-pointer flex flex-col items-center justify-center space-y-1.5" onclick="setPaymentMethod('qris')">
+                            <input type="radio" name="pay-method" value="qris" checked class="hidden">
+                            <i class="fa-solid fa-qrcode text-lg text-brand-600"></i>
+                            <span>QRIS Instant</span>
+                        </label>
+                        <label class="border-2 border-slate-200 rounded-xl p-2.5 text-center cursor-pointer flex flex-col items-center justify-center space-y-1.5" onclick="setPaymentMethod('va')">
+                            <input type="radio" name="pay-method" value="va" class="hidden">
+                            <i class="fa-solid fa-building-columns text-lg text-slate-400"></i>
+                            <span>Virtual Account</span>
+                        </label>
+                        <label class="border-2 border-slate-200 rounded-xl p-2.5 text-center cursor-pointer flex flex-col items-center justify-center space-y-1.5" onclick="setPaymentMethod('ewallet')">
+                            <input type="radio" name="pay-method" value="ewallet" class="hidden">
+                            <i class="fa-solid fa-wallet text-lg text-slate-400"></i>
+                            <span>Gopay / OVO</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Simulated payment step details (eg. QRIS code dynamic block) -->
+                <div id="simulated-payment-details" class="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center text-center space-y-2.5">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Silakan Pindai QRIS Berikut untuk Donasi</span>
+                    <div class="bg-white p-2.5 rounded-xl border border-slate-200" id="qris-box-wrapper">
+                        <!-- Instantly Generated Dynamic QRIS simulation -->
+                        <img id="qris-dummy-img" src="https://placehold.co/120x120/ffffff/000000?text=QRIS+AKSI+HIJAU" class="w-28 h-28" alt="Dummy QRIS Code">
+                    </div>
+                    <span class="text-[10px] font-mono text-slate-500">KODE KELOMPOK: AKSI-HIJAU-TANGSEL-2026</span>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="bg-slate-50 px-6 py-4 border-t border-slate-100 flex gap-3">
+                <button type="button" onclick="closeDonationModal()" class="flex-1 px-4 py-3 bg-white border border-slate-300 hover:bg-slate-100 rounded-xl text-slate-700 font-bold text-xs transition uppercase tracking-wider">
+                    Batal
+                </button>
+                <button type="button" onclick="executeSimulatedDonation()" class="flex-1 px-4 py-3 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs rounded-xl transition shadow uppercase tracking-wider">
+                    Selesaikan Donasi
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Modal: Dialog Notifikasi Umum -->
+    <div id="modal-notification" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full overflow-hidden border border-slate-100 text-center">
+            <div class="p-6 space-y-4">
+                <div class="mx-auto flex items-center justify-center h-14 w-14 rounded-full bg-emerald-100 text-emerald-600 text-2xl" id="notification-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div>
+                    <h3 class="text-base sm:text-lg font-bold text-slate-800" id="notification-title">Berhasil</h3>
+                    <p class="text-xs text-slate-500 mt-1 leading-relaxed" id="notification-desc">Deskripsi notifikasi.</p>
+                </div>
+            </div>
+            <div class="bg-slate-50 px-6 py-3.5 flex">
+                <button type="button" onclick="closeNotificationModal()" class="w-full px-4 py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs rounded-lg transition shadow">
+                    Selesai
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-slate-950 text-slate-400 pt-16 pb-8 border-t border-emerald-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            
+            <!-- Branding -->
+            <div class="space-y-4 md:col-span-1">
+                <a href="#" class="flex items-center space-x-2">
+                    <span class="p-2 bg-brand-600 rounded-lg text-white">
+                        <i class="fa-solid fa-seedling text-sm"></i>
+                    </span>
+                    <span class="font-extrabold text-lg text-white tracking-tight">Aksi Hijau</span>
+                </a>
+                <p class="text-xs leading-relaxed text-slate-500">
+                    Platform penggalangan dana kepemudaan untuk penghijauan pesisir Banten utara dan implementasi tata kelola sampah pintar di Tangerang Selatan.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="space-y-3">
+                <h4 class="text-xs font-bold text-slate-200 uppercase tracking-widest">Aksi Lapangan</h4>
+                <ul class="text-xs space-y-2">
+                    <li><a href="#proyek" class="hover:text-brand-500 transition">Sponsori Mangrove</a></li>
+                    <li><a href="#kalkulator" class="hover:text-brand-500 transition">Carbon Calculator</a></li>
+                    <li><a href="#peta" class="hover:text-brand-500 transition">Peta Interaktif</a></li>
+                    <li><a href="#ai-advisor" class="hover:text-brand-500 transition">Eco AI Assistant</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact/Location info -->
+            <div class="space-y-3">
+                <h4 class="text-xs font-bold text-slate-200 uppercase tracking-widest">Sekretariat</h4>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                    Komunitas Pemuda Peduli Lingkungan Tangsel<br>
+                    Jl. Foresta Green, BSD City, Tangerang Selatan, Banten, 15310
+                </p>
+            </div>
+
+            <!-- Newsletter Form -->
+            <div class="space-y-3">
+                <h4 class="text-xs font-bold text-slate-200 uppercase tracking-widest">Dapatkan Pembaruan Dampak</h4>
+                <p class="text-xs text-slate-500">Berlangganan laporan pertanggungjawaban donasi bulanan.</p>
+                <form onsubmit="event.preventDefault(); showNotification('Terima Kasih!', 'Email Anda berhasil terdaftar ke newsletter aksi kami.', 'success')" class="flex gap-2">
+                    <input type="email" required placeholder="Email Anda" class="bg-slate-900 border border-slate-800 text-xs px-3 py-2 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-500 flex-grow text-white">
+                    <button type="submit" class="bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs px-3 py-2 rounded-xl transition">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-900 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-600 font-medium">
+            <p>&copy; 2026 Aksi Hijau Tangerang Selatan. Seluruh hak cipta dilindungi undang-undang.</p>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-brand-500 transition"><i class="fa-brands fa-instagram text-base"></i></a>
+                <a href="#" class="hover:text-brand-500 transition"><i class="fa-brands fa-tiktok text-base"></i></a>
+                <a href="#" class="hover:text-brand-500 transition"><i class="fa-brands fa-whatsapp text-base"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT LOGIC CONTROLLER ================= -->
+    <script>
+        // Cumulative Metrics States
+        let statsState = {
+            totalFunds: 42200000, // Dimulai dari penjumlahan raised awal: 32.200.000 + 10.000.000
+            totalTrees: 2110,     // Rp 20k per bibit
+            totalDonors: 142,
+            totalWaste: 12.4
+        };
+
+        // Projects Data State
+        let projectsState = {
+            1: {
+                id: 1,
+                title: "Restorasi Sabuk Hijau Mangrove Pesisir Banten",
+                category: "Restorasi Pesisir",
+                target: 50000000,
+                raised: 32200000,
+                percent: 64,
+                multiplier: 20000 // Rp 20.000 per bibit
+            },
+            2: {
+                id: 2,
+                title: "Edukasi & Pembentukan Bank Sampah Warga Tangsel",
+                category: "Edukasi Sampah",
+                target: 25000000,
+                raised: 10000000,
+                percent: 40,
+                multiplier: 0 // Tidak berpatokan langsung per pohon
+            }
+        };
+
+        // Eco-Pledge Wall initial mock data
+        let pledges = [
+            { id: 1, name: "Siti di Pamulang", text: "Saya berjanji memisahkan sisa sayur dapur untuk dijadikan bahan komposting pupuk organik." },
+            { id: 2, name: "Rian dari Ciputat", text: "Saya berkomitmen membawa wadah tumbler minum sendiri ke kantor dan menolak botol plastik sekali pakai." },
+            { id: 3, name: "Aris di Serpong", text: "Saya berjanji menyetorkan sampah kardus dan kertas rumah tangga saya ke Bank Sampah terdekat sebulan sekali." }
+        ];
+
+        // Map areas dynamic data
+        const mapDetails = {
+            mangrove: {
+                title: "Restorasi Mangrove Banten",
+                desc: "Berlokasi di Teluk Banten, kami berkolaborasi dengan kelompok pemuda dan nelayan setempat untuk memelihara pembibitan mangrove guna menahan risiko abrasi.",
+                status: "Sangat Aktif",
+                total: "2.820 Batang"
+            },
+            waste: {
+                title: "Edukasi Sampah Tangsel",
+                desc: "Memfasilitasi instalasi komposter komunal dan sosialisasi manajemen bank sampah digital di wilayah perumahan dan perkampungan Tangerang Selatan.",
+                status: "Berjalan Lancar",
+                total: "3 Wilayah RW"
+            }
+        };
+
+        // Active state of donation flow
+        let currentDonationProject = null;
+        let selectedPaymentMethod = 'qris';
+
+        // Custom Notification helper
+        function showNotification(title, desc, type = 'success') {
+            const modal = document.getElementById('modal-notification');
+            const titleEl = document.getElementById('notification-title');
+            const descEl = document.getElementById('notification-desc');
+            const iconEl = document.getElementById('notification-icon');
+
+            titleEl.textContent = title;
+            descEl.textContent = desc;
+
+            if (type === 'success') {
+                iconEl.className = 'mx-auto flex items-center justify-center h-14 w-14 rounded-full bg-emerald-100 text-emerald-600 text-2xl';
+                iconEl.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+            } else {
+                iconEl.className = 'mx-auto flex items-center justify-center h-14 w-14 rounded-full bg-amber-100 text-amber-600 text-2xl';
+                iconEl.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i>';
+            }
+
+            modal.classList.remove('hidden');
+        }
+
+        function closeNotificationModal() {
+            document.getElementById('modal-notification').classList.add('hidden');
+        }
+
+        // Open donation flow modal and setup context
+        function openDonationModal(projectId) {
+            currentDonationProject = projectsState[projectId];
+            if (!currentDonationProject) return;
+
+            document.getElementById('modal-project-title').textContent = currentDonationProject.title;
+            document.getElementById('modal-project-category').textContent = currentDonationProject.category;
+            
+            // Set default presets
+            document.getElementById('input-custom-amount').value = 50000;
+            calculateMangroveMultiplier();
+
+            // Set default payment method styling visual
+            setPaymentMethod('qris');
+
+            document.getElementById('modal-donation').classList.remove('hidden');
+        }
+
+        function closeDonationModal() {
+            document.getElementById('modal-donation').classList.add('hidden');
+            currentDonationProject = null;
+        }
+
+        // Handle quick preset buttons click inside modal
+        function selectPresetAmount(amount) {
+            document.getElementById('input-custom-amount').value = amount;
+            calculateMangroveMultiplier();
+        }
+
+        // Live calculation of sponsor multiplier
+        function calculateMangroveMultiplier() {
+            const amount = parseInt(document.getElementById('input-custom-amount').value) || 0;
+            const multiplierText = document.getElementById('donation-multiplier-info');
+            
+            if (currentDonationProject && currentDonationProject.id === 1) {
+                const count = Math.floor(amount / 20000);
+                multiplierText.textContent = `Setara dengan mensponsori penanaman ${count} bibit mangrove.`;
+            } else {
+                multiplierText.textContent = `Donasi Anda menyokong operasional bank sampah & komposter warga.`;
+            }
+
+            // Update QRIS code generator dummy target
+            const dummyQRIS = document.getElementById('qris-dummy-img');
+            dummyQRIS.src = `https://placehold.co/120x120/ffffff/000000?text=Scan+Rp+${amount}`;
+        }
+
+        // Adjust payment visual selection
+        function setPaymentMethod(method) {
+            selectedPaymentMethod = method;
+            const labels = document.querySelectorAll('#modal-donation input[name="pay-method"]');
+            
+            labels.forEach(radio => {
+                const labelElement = radio.closest('label');
+                if (radio.value === method) {
+                    labelElement.className = "border-2 border-brand-500 bg-brand-50/50 rounded-xl p-2.5 text-center cursor-pointer flex flex-col items-center justify-center space-y-1.5";
+                } else {
+                    labelElement.className = "border-2 border-slate-200 rounded-xl p-2.5 text-center cursor-pointer flex flex-col items-center justify-center space-y-1.5";
+                }
+            });
+
+            // Adjust sub-view explanation
+            const simulatedPayDetails = document.getElementById('simulated-payment-details');
+            if (method === 'qris') {
+                simulatedPayDetails.innerHTML = `
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Pindai QRIS Berikut untuk Menyelesaikan</span>
+                    <div class="bg-white p-2.5 rounded-xl border border-slate-200">
+                        <img id="qris-dummy-img" src="https://placehold.co/120x120/ffffff/000000?text=Scan+QRIS" class="w-28 h-28" alt="Dummy QRIS Code">
+                    </div>
+                `;
+                calculateMangroveMultiplier(); // Refresh QR amount
+            } else if (method === 'va') {
+                simulatedPayDetails.innerHTML = `
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Informasi Virtual Account</span>
+                    <div class="bg-slate-200/50 p-3 rounded-xl border border-slate-300 w-full font-mono text-center space-y-1">
+                        <span class="text-slate-500 text-[10px] uppercase block">No. Virtual Account BNI</span>
+                        <span class="text-slate-800 font-extrabold block text-sm tracking-wider">8273-0857-1234-5678</span>
+                    </div>
+                `;
+            } else {
+                simulatedPayDetails.innerHTML = `
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Instruksi E-Wallet</span>
+                    <div class="bg-indigo-50 border border-indigo-100 p-3 rounded-xl text-center w-full text-indigo-900 text-xs leading-relaxed">
+                        Simulasi integrasi gateway. Saldo Anda akan otomatis terpotong saat menekan tombol "Selesaikan Donasi" di bawah.
+                    </div>
+                `;
+            }
+        }
+
+        // Finalize transaction and update real-time statistics
+        function executeSimulatedDonation() {
+            const amount = parseInt(document.getElementById('input-custom-amount').value) || 0;
+            const donorName = document.getElementById('input-donor-name').value.trim() || "Donatur Anonim";
+
+            if (amount < 10000) {
+                showNotification("Nominal Kurang", "Batas minimal donasi adalah Rp 10.000 untuk efisiensi sistem transaksi.", "warning");
+                return;
+            }
+
+            // Update stats
+            statsState.totalFunds += amount;
+            statsState.totalDonors += 1;
+            
+            if (currentDonationProject.id === 1) {
+                // If mangrove restoration
+                const addedTrees = Math.floor(amount / 20000);
+                statsState.totalTrees += addedTrees;
+            }
+
+            // Update project visual inside state
+            currentDonationProject.raised += amount;
+            currentDonationProject.percent = Math.min(100, Math.round((currentDonationProject.raised / currentDonationProject.target) * 100));
+
+            // Sync with DOM Elements
+            document.getElementById(`proj-${currentDonationProject.id}-percent`).textContent = `${currentDonationProject.percent}%`;
+            document.getElementById(`proj-${currentDonationProject.id}-bar`).style.width = `${currentDonationProject.percent}%`;
+            document.getElementById(`proj-${currentDonationProject.id}-raised`).textContent = currentDonationProject.raised.toLocaleString('id-ID');
+
+            // Update Global statistics Box UI
+            document.getElementById('stat-total-funds').textContent = `Rp ${statsState.totalFunds.toLocaleString('id-ID')}`;
+            document.getElementById('stat-total-trees').textContent = `${statsState.totalTrees.toLocaleString('id-ID')} Pohon`;
+            document.getElementById('stat-total-donors').textContent = `${statsState.totalDonors} Orang`;
+
+            closeDonationModal();
+            showNotification(
+                "Terima Kasih Banyak!", 
+                `Donasi dari ${donorName} senilai Rp ${amount.toLocaleString('id-ID')} berhasil kami terima. Dampak nyata aksi Anda telah diperbarui pada sistem.`, 
+                "success"
+            );
+        }
+
+        function calculateEcoImpact() {
+            const km = parseInt(document.getElementById('input-range-km').value) || 0;
+            const kwh = parseInt(document.getElementById('input-range-kwh').value) || 0;
+            
+            // Get Vehicle multiplier
+            const vehicleTypes = document.getElementsByName('vehicle-type');
+            let vehicleMultiplier = 0.12; // default motor
+
+            for (const radio of vehicleTypes) {
+                if (radio.checked) {
+                    if (radio.value === 'car') {
+                        vehicleMultiplier = 0.20; // car
+                    } else if (radio.value === 'electric') {
+                        vehicleMultiplier = 0.05; // electric
+                    }
+                }
+            }
+
+            // Adjust Range label text values
+            document.getElementById('val-range-km').textContent = km;
+            document.getElementById('val-range-kwh').textContent = kwh;
+
+            // Simple carbon offset formula
+            // CO2 dari kendaraan per hari = KM * Multiplier * 365 (hari)
+            const vehicleCarbonYear = km * vehicleMultiplier * 365;
+            // CO2 dari listrik per tahun = kWh * 12 (bulan) * 0.85 (faktor konversi CO2/kWh listrik batu bara)
+            const electricityCarbonYear = kwh * 12 * 0.85;
+
+            const totalCarbonYear = Math.round(vehicleCarbonYear + electricityCarbonYear);
+            // Jumlah mangrove yg direkomendasikan = total emisi / 20 kg (daya serap 1 pohon mangrove per tahun)
+            const mangroveRecommended = Math.max(1, Math.ceil(totalCarbonYear / 20));
+
+            // Sync with Summary
+            document.getElementById('calc-co2-total').textContent = totalCarbonYear.toLocaleString('id-ID');
+            document.getElementById('calc-mangrove-rec').textContent = mangroveRecommended;
+        }
+
+        // Connect Calculator recommendations with Donation Modal Form
+        function presetDonationFromCalc() {
+            const count = parseInt(document.getElementById('calc-mangrove-rec').textContent) || 0;
+            const calculationCost = count * 20000; // Rp 20k per bibit
+
+            openDonationModal(1); // Open Project Mangrove Banten
+            document.getElementById('input-custom-amount').value = calculationCost;
+            calculateMangroveMultiplier();
+        }
+
+        async function handleSendChatMessage(event) {
+            event.preventDefault();
+
+            const inputField = document.getElementById('chat-input-field');
+            const query = inputField.value.trim();
+            if (!query) return;
+
+            // Clear input and show immediate bubble
+            inputField.value = '';
+            appendChatMessage('user', query);
+
+            // Toggle spinner
+            const spinner = document.getElementById('chat-loading-spinner');
+            spinner.classList.remove('hidden');
+
+            try {
+                // Setup payload for standard Gemini API call (model: gemini-3-flash-preview)
+                const systemPrompt = `Anda adalah Mas Eco-Bot, spesialis asisten lingkungan yang hangat, cerdas, ramah, dan solutif dari komunitas 'Aksi Hijau' di Tangerang Selatan. 
+                Tugas Anda adalah mengedukasi masyarakat secara praktis tentang cara memilah sampah rumah tangga (organik vs anorganik), teknik komposting mandiri, 
+                dan pentingnya penanaman mangrove di pesisir Banten. Jawablah menggunakan Bahasa Indonesia yang ramah, santun, dan sesekali gunakan istilah lokal yang umum di Tangerang Selatan jika relevan. 
+                Batasi jawaban Anda maksimal 2 paragraf padat agar nyaman dibaca di layar chat box kecil.`;
+
+                const apiKey = ""; // Canvas runtime injection handler
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+                const payload = {
+                    contents: [{ parts: [{ text: query }] }],
+                    systemInstruction: {
+                        parts: [{ text: systemPrompt }]
+                    }
+                };
+
+                // Fetch with exponential backoff capability in mind
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) throw new Error('API server busy. Please try again.');
+
+                const result = await response.json();
+                const aiResponseText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (aiResponseText) {
+                    appendChatMessage('ai', aiResponseText);
+                } else {
+                    appendChatMessage('ai', "Maaf ya Kak, sistem AI sedang beristirahat sebentar. Silakan coba tanyakan kembali beberapa saat lagi!");
+                }
+
+            } catch (error) {
+                console.error("Gemini API error: ", error);
+                appendChatMessage('ai', "Waduh, koneksi ke server Eco-AI terputus. Silakan periksa kembali jaringan internet Anda ya!");
+            } finally {
+                spinner.classList.add('hidden');
+                scrollChatToBottom();
+            }
+        }
+
+        function appendChatMessage(sender, text) {
+            const container = document.getElementById('chat-messages-container');
+            const bubbleDiv = document.createElement('div');
+
+            if (sender === 'user') {
+                bubbleDiv.className = "flex items-start justify-end space-x-2.5 max-w-[85%] ml-auto";
+                bubbleDiv.innerHTML = `
+                    <div class="bg-brand-600 text-white p-3.5 rounded-2xl shadow-sm text-xs sm:text-sm">
+                        ${text}
+                    </div>
+                `;
+            } else {
+                bubbleDiv.className = "flex items-start space-x-2.5 max-w-[85%]";
+                bubbleDiv.innerHTML = `
+                    <div class="w-7 h-7 rounded-lg bg-emerald-100 text-brand-800 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-2xl border border-slate-200 text-slate-700 leading-relaxed text-xs sm:text-sm">
+                        ${text}
+                    </div>
+                `;
+            }
+
+            container.appendChild(bubbleDiv);
+            scrollChatToBottom();
+        }
+
+        function scrollChatToBottom() {
+            const container = document.getElementById('chat-messages-container');
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function handleNewPledge(event) {
+            event.preventDefault();
+
+            const nameInput = document.getElementById('pledge-name');
+            const textInput = document.getElementById('pledge-text');
+
+            const name = nameInput.value.trim();
+            const text = textInput.value.trim();
+
+            if (!name || !text) return;
+
+            // Add to model array
+            const newPledgeObj = {
+                id: Date.now(),
+                name: name,
+                text: text
+            };
+
+            pledges.unshift(newPledgeObj); // insert front
+
+            // Clear input fields
+            nameInput.value = '';
+            textInput.value = '';
+
+            renderPledgesBoard();
+            showNotification("Komitmen Terkirim!", "Janji ramah lingkunganmu telah dipublikasikan di dinding komitmen. Mari kita buktikan bersama!", "success");
+        }
+
+        function renderPledgesBoard() {
+            const container = document.getElementById('pledges-board-container');
+            const counterLabel = document.getElementById('pledge-counter');
+            
+            container.innerHTML = '';
+            counterLabel.textContent = `${pledges.length} Janji`;
+
+            pledges.forEach(pledge => {
+                const card = document.createElement('div');
+                card.className = "bg-emerald-50/40 border border-emerald-100/80 p-4.5 rounded-2xl space-y-2 flex flex-col justify-between hover:border-emerald-300 transition duration-150";
+                card.innerHTML = `
+                    <p class="text-xs sm:text-sm text-slate-600 italic font-medium leading-relaxed">"${pledge.text}"</p>
+                    <div class="flex items-center space-x-2 mt-2 pt-2 border-t border-emerald-100/50">
+                        <span class="w-6 h-6 rounded-full bg-slate-900 text-white font-bold text-[9px] flex items-center justify-center uppercase shrink-0">
+                            ${pledge.name.charAt(0)}
+                        </span>
+                        <span class="text-[10px] font-bold text-slate-500">${pledge.name}</span>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Interactive Map detailing helper
+        function showMapDetail(key) {
+            const detail = mapDetails[key];
+            if (!detail) return;
+
+            const iconClass = key === 'mangrove' ? 'fa-tree' : 'fa-trash-arrow-up';
+            const iconBg = key === 'mangrove' ? 'bg-emerald-100 text-brand-800' : 'bg-indigo-100 text-indigo-800';
+
+            document.getElementById('map-detail-box').innerHTML = `
+                <div class="flex items-center space-x-3">
+                    <span class="p-2.5 ${iconBg} rounded-xl"><i class="fa-solid ${iconClass}"></i></span>
+                    <h3 class="font-bold text-slate-800 text-lg">${detail.title}</h3>
+                </div>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    ${detail.desc}
+                </p>
+                <div class="bg-white p-3 rounded-2xl border border-slate-200/80 text-xs space-y-1.5 font-semibold text-slate-500">
+                    <div><i class="fa-solid fa-check text-brand-600 mr-2"></i>Status: <span class="text-brand-800 font-bold">${detail.status}</span></div>
+                    <div><i class="fa-solid fa-check text-brand-600 mr-2"></i>Indikator: <span class="text-brand-800 font-bold">${detail.total}</span></div>
+                </div>
+            `;
+        }
+
+        // Initialize things on document load
+        window.onload = function () {
+            // Build elements
+            calculateEcoImpact();
+            renderPledgesBoard();
+            console.log("Aksi Hijau web interactive initialization complete.");
+        }
+    </script>
+</body>
+</html>
